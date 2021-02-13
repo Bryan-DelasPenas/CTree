@@ -1,0 +1,22 @@
+ex:                   40                        45                   45 
+		     /  \		       /  \                    \ 
+		    5    45                   40   50                   50
+		    	/  \                 /  \    \                    \
+		       42   50              5   42    55                   55
+		       	      \
+			       55
+
+(a) For a trinode restructing, the left and the right of the subtree must have a height imbalance greater than 1, this could possibly also make a size inbalance aswell but for the example above it is only a height inbalance.
+
+(b) x = 40, y = 45, z = 50
+    move z to y, 
+    move y to x,
+    movw x to m_left of y;
+    move y->m_left to the x->m_right;
+    insert 55;
+
+(c) It creates a balanced tree as the heights are  not more than 1, so you won't end up with a linked list. Everytime there is an inbalance, it will restructure itself,, the main use of this tree is that it is faster as it's search time is O(logn)
+
+(d) I tried to implament it everytime I inserted a new data, but it didn't work so well as everytime I inserted, i would get the wrong graph, and thus everything else would not work properly.
+
+(II) This tree was called a chestnut tree because on average a chestnut tree size grows 2 inches a year
